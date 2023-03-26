@@ -50,4 +50,10 @@ public class PatientController {
 
         return patientService.findByEmail(email);
     }
+
+    // ------------------------------- Verify Phone Number -------------------------------------------
+    @GetMapping("/verifyPhoneNumber/{phoneNumber}")
+    public boolean verifyPhoneNumber(@PathVariable String phoneNumber) {
+        return patientService.verifyPhoneNumber(Long.parseLong(phoneNumber));
+    }
 }

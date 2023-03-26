@@ -40,10 +40,14 @@ public class DoctorController {
         return doctorService.getAllDoctors();
     }
 
+    // ------------------------------------- Get Doctor Details by Email ------------------------------------------
     @GetMapping("/getdoctorByEmail/{email}")
     public DoctorDetails getDoctorByEmail(@PathVariable String email) {
 //        String email = loginCredentials.getEmail();
 
         return doctorService.findByEmail(email);
     }
+
+    // ------------------------------------- Phone number Verification ----------------------------------
+
 }

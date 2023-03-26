@@ -6,6 +6,7 @@ import com.shield.eaarogya.Entity.Patient;
 import com.shield.eaarogya.Service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.util.pattern.PathPattern;
 
 import java.util.List;
 
@@ -51,6 +52,16 @@ public class PatientServiceImpl implements PatientService {
     @Override
     public Patient findByEmail(String email) {
         return patientRepository.findByEmail(email);
+    }
+
+    @Override
+    public boolean verifyPhoneNumber(long phoneNumber) {
+        Patient patient = patientRepository.findByPhoneNo(phoneNumber);
+        if(patient != null) {
+            return true;
+        }
+        else
+            return false;
     }
 
 }

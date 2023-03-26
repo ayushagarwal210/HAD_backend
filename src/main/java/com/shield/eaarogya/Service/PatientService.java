@@ -19,4 +19,6 @@ public interface PatientService {
     public PatientDetails login(String email,String password);
 
     public Patient findByEmail(String email);
+
+    public boolean verifyPhoneNumber(long phoneNumber);
 }
