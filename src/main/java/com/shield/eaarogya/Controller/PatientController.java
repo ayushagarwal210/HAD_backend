@@ -53,7 +53,7 @@ public class PatientController {
 
     // ------------------------------- Verify Phone Number -------------------------------------------
     @GetMapping("/verifyPhoneNumber/{phoneNumber}")
-    public boolean verifyPhoneNumber(@PathVariable String phoneNumber) {
+    public Patient verifyPhoneNumber(@PathVariable String phoneNumber) {
         return patientService.verifyPhoneNumber(Long.parseLong(phoneNumber));
     }
 }

@@ -20,5 +20,5 @@ public interface PatientService {
 
     public Patient findByEmail(String email);
 
-    public boolean verifyPhoneNumber(long phoneNumber);
+    public Patient verifyPhoneNumber(long phoneNumber);
 }

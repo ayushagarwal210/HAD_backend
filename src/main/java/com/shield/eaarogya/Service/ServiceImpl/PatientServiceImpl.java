@@ -55,13 +55,13 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public boolean verifyPhoneNumber(long phoneNumber) {
+    public Patient verifyPhoneNumber(long phoneNumber) {
         Patient patient = patientRepository.findByPhoneNo(phoneNumber);
         if(patient != null) {
-            return true;
+            return patient;
         }
         else
-            return false;
+            return null;
     }
 
 }
